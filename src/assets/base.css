@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Pixelify Sans';
+  src: url('fonts/pixelify_sans/PixelifySans-VariableFont_wght.ttf') format('truetype');
+}
+
+* {
+  font-family: var(--font);
+}
+
+:root {
+  --font: 'Pixelify Sans', sans-serif;
+
+  --white: 255 255 255;
+  --black: 47 47 47;
+  --gradient: linear-gradient(90deg, #004ccf 0%, #a20482 33%, #930f27 66%, #ac5305 100%);
+  --color-background: #aaaabb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: 209 209 209;
+    --black: 0 0 0;
+    --gradient: linear-gradient(90deg, #00cbf0 0%, #c864fa 33%, #ff5740 66%, #fb0 100%);
+    --color-background: #333344;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
