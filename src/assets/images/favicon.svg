@@ -1,0 +1,38 @@
+<svg viewBox="0 0 125 125" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+        <linearGradient id="myGradient" x1="0%" y1="0%" x2="100%" y2="50%">
+            <stop offset="10%" style="stop-color:#004ccf; stop-opacity:1" />
+            <stop offset="60%" style="stop-color:#a20482; stop-opacity:1" />
+            <stop offset="85%" style="stop-color:#930f27; stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#ac5305; stop-opacity:1" />
+        </linearGradient>
+
+        <linearGradient id="myGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#00cbf0; stop-opacity:1" />
+            <stop offset="33%" style="stop-color:#c864fa; stop-opacity:1" />
+            <stop offset="66%" style="stop-color:#ff5740; stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#fb0; stop-opacity:1" />
+        </linearGradient>
+    </defs>
+        
+        <!-- Example shape using the gradient -->
+        <rect x="0" y="0" width="125" height="125" fill="url(#myGradient)" />
+      
+    <g>
+        <circle fill="#fff" r="11" cy="37.5" cx="37.5"/>
+        <circle fill="#fff" r="11" cy="37.5" cx="62.5"/>
+        <circle fill="#fff" r="11" cy="37.5" cx="87.5"/>
+    </g>
+
+    <g>
+        <circle fill="#fff" r="11" cy="62.5" cx="37.5"/>
+        <circle fill="#fff" r="11" cy="62.5" cx="62.5"/>
+        <circle fill="#000" r="11" cy="62.5" cx="87.5"/>
+    </g>
+
+    <g>
+        <circle fill="#fff" r="11" cy="87.5" cx="37.5"/>
+        <circle fill="#000" r="11" cy="87.5" cx="62.5"/>
+        <circle fill="#000" r="11" cy="87.5" cx="87.5"/>
+    </g>
+</svg>
