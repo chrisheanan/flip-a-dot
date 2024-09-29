@@ -4,6 +4,11 @@ import Controls from '@/components/Controls.vue';
 import Grid from '@/components/Grid.vue';
 import Layout from '@/components/Layout.vue';
 
+type ButtonType = InstanceType<typeof Button>;
+type ControlsType = InstanceType<typeof Controls>;
+type GridType = InstanceType<typeof Grid>;
+type LayoutType = InstanceType<typeof Layout>;
+
 import { usePixelStore } from '@/stores/pixels';
 
 const store = usePixelStore();

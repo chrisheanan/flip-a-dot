@@ -1,10 +1,9 @@
-<script setup>
-defineProps({
-  active: {
-    type: Boolean,
-    default: false,
-  },
-})
+<script setup lang="ts">
+interface Props {
+  active?: boolean,
+}
+
+defineProps<Props>();
 </script>
 
 <template>
