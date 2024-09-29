@@ -1,14 +1,11 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
-// import { toRaw } from 'vue';
 import { useLocalStorage } from '@vueuse/core';
 
 export const usePixelStore = defineStore('pixel', () => {
   const colourWhite = ref<boolean>(true);
 
-  const pixelDots = useLocalStorage('pixelDots', ref<number[][]>([]));
-
-  resetBoard(false);
+  const pixelDots = useLocalStorage('pixelDots', ref<number[][]>(generateArray(0)));
 
   function flip(x: number, y: number): void {
     pixelDots.value[x][y] = pixelDots.value[x][y] ? 0 : 1;
@@ -19,9 +16,13 @@ export const usePixelStore = defineStore('pixel', () => {
   }
 
   function resetBoard(resetWhite: boolean = false): void {
-    pixelDots.value = Array(28)
+    pixelDots.value = generateArray(resetWhite ? 1 : 0);
+  }
+
+  function generateArray(defaultValue: number = 0): number[][] {
+    return Array(28)
       .fill(0)
-      .map(() => Array(28).fill(resetWhite ? 1 : 0));
+      .map(() => Array(28).fill(defaultValue));
   }
 
   function changeColour(toWhite = true): void {
