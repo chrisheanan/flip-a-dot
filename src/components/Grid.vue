@@ -24,7 +24,6 @@ function flip(rowIndex: number, columnIndex: number): void {
 function flipPointer($event: PointerEvent): void {
     const el = document.elementFromPoint($event.clientX, $event.clientY) as HTMLElement;
 
-    console.log(el);
     if (el && el.dataset.row && el.dataset.column) {
         isTouchDown.value ? store.colourIn(parseInt(el.dataset.row), parseInt(el.dataset.column)) : null;
     }
